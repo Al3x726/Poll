@@ -28,6 +28,8 @@ def prints(pop, samp, perc, var):
 
 def main():
     try:
+        if len(argv) != 4:
+            exit(84)
         pop = int(argv[1])
         if pop <= 0:
             raise ValueError
