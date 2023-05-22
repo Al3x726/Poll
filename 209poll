@@ -4,17 +4,17 @@ from math import *
 
 def calc1(var, perc, a):
     res = perc - (a * sqrt(var))
-    if (res < 0):
+    if (res * 100 < 0):
         return (0)
-    if (res > 100):
+    if (res * 100 > 100):
         return (100)
     return (res)
 
 def calc2(var, perc, a):
     res = perc + (a * sqrt(var))
-    if (res < 0):
+    if (res * 100 < 0):
         return (0)
-    if (res > 100):
+    if (res * 100 > 100):
         return (100)
     return (res)
 
@@ -46,7 +46,11 @@ def main():
         exit(84)
 
     perc /= 100
+    if (pop == 1):
+        exit(84)
     var = perc * (1 - perc) / samp * ((pop - samp) / (pop - 1))
+    if (var < 0):
+        exit(84)
     prints(pop, samp, perc, var)
     return 0
 
