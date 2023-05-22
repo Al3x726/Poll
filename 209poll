@@ -7,7 +7,7 @@ def calc1(var, perc, a):
     if (res * 100 < 0):
         return (0)
     if (res * 100 > 100):
-        return (100)
+        return (1)
     return (res)
 
 def calc2(var, perc, a):
@@ -15,7 +15,7 @@ def calc2(var, perc, a):
     if (res * 100 < 0):
         return (0)
     if (res * 100 > 100):
-        return (100)
+        return (1)
     return (res)
 
 def prints(pop, samp, perc, var):
